@@ -1,0 +1,32 @@
+java -Xmx512M -Xms512m -classpath classes strings.algorithms.APBT <filename1> <filename2> <minLength> <maxDifferences> <maximalOutput: 1 | 0> <printStdOutput: 1 | 0>
+
+1. Running on DNA samples
+=========================
+java -Xmx512M -Xms512m strings.algorithms.APBT 
+sample_inputs/corona1 sample_inputs/corona2 21 3 0 1
+
+Program output:
+--------------
+APBT algorithm
+Processed in 86147 ms.
+Produced output size=985
+
+(1253,308) - (1273,328)
+ttcagagtgtggattgctttg
+ttcagaggtggatatgatttg
+
+(12089,345) - (12113,368)
+aagctggcaaacagactgagtttgt
+aagctggaaacagacggaatttgt
+...
+
+2. Running on protein samples (order of magnitude faster, due to a larger alphabet)
+===================================================================================
+java -Xmx512M -Xms512m -classpath classes strings.algorithms.APBT 
+sample_inputs/humanprotein.txt sample_inputs/mouseprotein.txt 21 3 0 0
+
+Program output:
+---------------
+APBT algorithm
+Processed in 9270 ms.
+Produced output size=185094
