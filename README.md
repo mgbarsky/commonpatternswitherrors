@@ -4,9 +4,12 @@ commonpatternswitherrors
 <p>This is an implementation of the algorithm 
 for finding in two input texts all pairs of approximate common patterns, 
 which satisfy the following user-specified criteria: <br>
-the length of each pattern is at least <em>s</em> characters. <br>
-each pattern occurs in both input texts, but with up to <em>k</em> errors 
-(mismatches, insertions or deletions).</p>
+<ul>
+<li>the length of each pattern is at least <em>s</em> characters. </li>
+<li>each pattern occurs in both input texts, but with up to <em>k</em> errors 
+(mismatches, insertions or deletions)</li>
+</ul>
+</p>
 
 <p>The algorithm - All Paths Below the Threshold (APBT) - is described in <br>
 <em>M. Barsky, U. Stege, A. Thomo, C. Upton.</em><br> 
@@ -51,5 +54,5 @@ java -Xmx512M -Xms512m strings.algorithms.APBT ../sample_inputs/humanprotein.txt
 or use the jar-packaged app with the same arguments:
 <pre><code>java -Xmx512M -Xms512m -jar APBT.jar arguments</code></pre>
 <h2>Sample usage:</h2>
-There are two sample DNA files and two sample protein files in folder 'sample_inputs'. 
+There are two sample DNA files and two sample protein files in a compressed folder 'sample_inputs'. 
 Sample runs and sample outputs are recorded in file 'RUN_SAMPLES.txt'
